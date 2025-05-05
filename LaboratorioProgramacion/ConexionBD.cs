@@ -24,10 +24,10 @@ namespace LaboratorioProgramacion
             //cadena almacena la cadena de conexión para acceder a la base de datos de Access
             string cadena;
 
-            //Constructor de la clase ConexionBD que inicializa cadena con la ruta de la base de datos ProductosGarcia.accdb.
+            //Constructor de la clase ConexionBD que inicializa cadena con la ruta de la base de datos Productos-Lab3.accdb.
             public ConexionBD()
             {
-                cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= ProductosGarcia.accdb";
+                cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Productos-Lab3.accdb";
             }
 
             public void listarProductos(DataGridView dgvProductos)
