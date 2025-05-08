@@ -33,6 +33,7 @@ namespace LaboratorioProgramacion
             //Muestra el formulario de manera modal,
             //lo que significa que el usuario debe cerrar este formulario antes de regresar a la ventana principal
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace LaboratorioProgramacion
             Modifica_Producto frm = new Modifica_Producto();
             //Muestra el formulario de manera modal, permitiendo al usuario modificar un producto existente
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -75,6 +77,13 @@ namespace LaboratorioProgramacion
             //Establece el texto del TextBox txtCodigo a una cadena vacía, eliminando cualquier texto que contenga
             txtCodigo.Text = "";
 
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte frmReportar = new Reporte();
+            frmReportar.Show();
+            this.Hide();
         }
     }
 }

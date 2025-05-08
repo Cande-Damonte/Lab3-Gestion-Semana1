@@ -1,0 +1,15 @@
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\bin\Debug\LaboratorioProgramacion.exe.config
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\bin\Debug\LaboratorioProgramacion.exe
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\bin\Debug\LaboratorioProgramacion.pdb
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.csproj.AssemblyReference.cache
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.BuscarProducto.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Agregar_producto.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Eliminar_Producto.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Inicio.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Modifica_Producto.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Properties.Resources.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.Reporte.resources
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.csproj.GenerateResource.cache
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.csproj.CoreCompileInputs.cache
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.exe
+C:\Users\cande\source\repos\Lab3-Gestion-Semana1\LaboratorioProgramacion\obj\Debug\LaboratorioProgramacion.pdb

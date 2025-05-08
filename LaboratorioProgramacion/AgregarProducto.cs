@@ -77,20 +77,24 @@ namespace LaboratorioProgramacion
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Modifica_Producto frm = new Modifica_Producto();
-            frm.ShowDialog();
+            Modifica_Producto frmModificar = new Modifica_Producto();
+            frmModificar.Show();
+            this.Hide();
+
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Eliminar_Producto frm = new Eliminar_Producto();
-            frm.ShowDialog();
+           Eliminar_Producto frmEliminar = new Eliminar_Producto();
+            frmEliminar.Show();
+            this.Hide();
         }
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reporte frm = new Reporte();
-            frm.ShowDialog();
+            Reporte frmReportar = new Reporte();
+            frmReportar.Show();
+            this.Hide();
         }
     }
 }

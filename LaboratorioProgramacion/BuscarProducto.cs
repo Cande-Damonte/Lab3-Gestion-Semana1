@@ -17,7 +17,36 @@ namespace LaboratorioProgramacion
             InitializeComponent();
         }
 
-        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar_producto frm = new Agregar_producto();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modifica_Producto frm = new Modifica_Producto();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Eliminar_Producto frm = new Eliminar_Producto();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte frm = new Reporte();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             //Crea una instancia de Productos, que representará el producto a buscar.
             // Declara una variable idProducto para almacenar el código del producto.
@@ -57,30 +86,6 @@ namespace LaboratorioProgramacion
             {
                 MessageBox.Show("Error buscando producto: " + ex.Message);
             }
-        }
-
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Agregar_producto frm = new Agregar_producto();
-            frm.ShowDialog();
-        }
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Modifica_Producto frm = new Modifica_Producto();
-            frm.ShowDialog();
-        }
-
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Eliminar_Producto frm = new Eliminar_Producto();
-            frm.ShowDialog();
-        }
-
-        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Reporte frm = new Reporte();
-            frm.ShowDialog();
         }
     }
 }

@@ -9,6 +9,8 @@ using System.Collections;
 using System.Data.OleDb;
 using System.Data;
 
+using System.Diagnostics;
+
 namespace LaboratorioProgramacion
 {
   
@@ -27,7 +29,8 @@ namespace LaboratorioProgramacion
             //Constructor de la clase ConexionBD que inicializa cadena con la ruta de la base de datos Productos-Lab3.accdb.
             public ConexionBD()
             {
-                cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Productos-Lab3.accdb";
+                cadena = " Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Productos-lab3.accdb";
+           
             }
 
             public void listarProductos(DataGridView dgvProductos)

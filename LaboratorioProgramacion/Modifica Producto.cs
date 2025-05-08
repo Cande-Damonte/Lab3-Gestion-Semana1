@@ -57,10 +57,9 @@ namespace LaboratorioProgramacion
             productoModificado.nombre = txtNombre.Text;
             //Asigna la descripción del producto ingresada en txtDescripcion a la propiedad descripcion de productoModificado
             productoModificado.descripcion = txtDescripcion.Text;
-            //Convierte el texto del cuadro de texto txtPrecio a un tipo double y lo asigna a la propiedad precio de productoModificado
+            //Convierte el texto del cuadro de texto txtPrecio a un tipo double para que pueda ser decimal y lo asigna a la propiedad precio de productoModificado
             productoModificado.precio = double.Parse(txtPrecio.Text);
-            //Convierte el valor del control NumericUpDown (nupStock) a un entero y lo asigna a la propiedad stock de productoModificado
-            productoModificado.stock = Convert.ToInt32(nupStock.Value);
+
 
             try
             {
@@ -100,6 +99,7 @@ namespace LaboratorioProgramacion
             //Muestra el formulario Agregar_producto como un cuadro de diálogo modal.
             //Esto significa que el usuario debe interactuar con este formulario antes de volver a la interfaz anterior.
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +108,7 @@ namespace LaboratorioProgramacion
             Eliminar_Producto frm = new Eliminar_Producto();
             //Muestra el formulario Eliminar_Producto como un cuadro de diálogo modal
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +117,7 @@ namespace LaboratorioProgramacion
             Reporte frm = new Reporte();
             //Muestra el formulario Reporte como un cuadro de diálogo modal
             frm.ShowDialog();
+            this.Hide();
         }
     }
 }

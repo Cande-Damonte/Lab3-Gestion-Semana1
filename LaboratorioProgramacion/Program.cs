@@ -16,7 +16,7 @@ namespace LaboratorioProgramacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Agregar_producto());
+            Application.Run(new Inicio());
         }
     }
 }

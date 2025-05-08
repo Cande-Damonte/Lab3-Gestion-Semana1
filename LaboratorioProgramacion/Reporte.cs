@@ -22,6 +22,7 @@ namespace LaboratorioProgramacion
             //Abre un formulario para buscar un producto.
             BuscarProducto frm = new BuscarProducto();
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace LaboratorioProgramacion
             //Abre un formulario para agregar un nuevo producto
             Agregar_producto frm = new Agregar_producto();
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace LaboratorioProgramacion
             //Abre un formulario para modificar un producto existente
             Modifica_Producto frm = new Modifica_Producto();
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,11 +46,12 @@ namespace LaboratorioProgramacion
             //Abre un formulario para eliminar un producto
             Eliminar_Producto frm = new Eliminar_Producto();
             frm.ShowDialog();
+            this.Hide();
         }
 
         private void Reporte_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
             ConexionBD BD = new ConexionBD();
             BD.CargarProductosBajoStock(lstControl);
         }
