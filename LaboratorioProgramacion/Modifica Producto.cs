@@ -24,12 +24,8 @@ namespace LaboratorioProgramacion
             // Al instanciar conexion, se establece una conexión a la base de datos a través
             // de la cadena de conexión definida en el constructor de ConexionBD.
             ConexionBD conexion = new ConexionBD();
-            //Llama al método listarProductos de la instancia conexion.se encarga de obtener una lista de productos de la base de datos y
-            //llenar el dgvProductos con los datos recuperados
-            //cuando el formulario se carga, el usuario puede ver todos los productos existentes en la base de datos en una tabla
-            conexion.listarProductos(dgvProductos);
-            //Llama al método LlenarcmbCategorias de la instancia conexion.
-            //obtiene las categorías disponibles de la base de datos y las agrega al cmbCategorias
+            conexion.listarProductos(dgvProductos1);
+
             conexion.LlenarcmbCategorias(cmbCategorias);
         }
 
@@ -59,6 +55,7 @@ namespace LaboratorioProgramacion
             productoModificado.descripcion = txtDescripcion.Text;
             //Convierte el texto del cuadro de texto txtPrecio a un tipo double para que pueda ser decimal y lo asigna a la propiedad precio de productoModificado
             productoModificado.precio = double.Parse(txtPrecio.Text);
+            productoModificado.stock = (int)nupStock.Value;
 
 
             try
@@ -67,9 +64,9 @@ namespace LaboratorioProgramacion
                 //pasando el objeto productoModificado como parámetro para actualizar los datos en la base de datos
                 conexion.ModificarProductos(productoModificado);
                 //Actualiza el dgvProductos con la lista actualizada de productos después de la modificación
-                conexion.listarProductos(dgvProductos);
+                conexion.listarProductos(dgvProductos1);
                 //Llama al método llenarListbox para agregar el producto modificado a un lstDescripcion con su nombre, descripción, precio y stock
-                conexion.llenarListbox(lstDescripcion, productoModificado.nombre, productoModificado.descripcion, (double)productoModificado.precio, productoModificado.stock);
+                conexion.llenarListbox(lstDescripcion, productoModificado.nombre, productoModificado.descripcion, (double)productoModificado.precio, (int)productoModificado.stock);
                 //Llama al método Limpiar para borrar los campos del formulario
                 Limpiar();
 
@@ -90,6 +87,9 @@ namespace LaboratorioProgramacion
             txtDescripcion.Text = "";
             //Limpia el campo de texto txtPrecio
             txtPrecio.Text = "";
+            cmbCategorias.SelectedIndex = -1;
+            nupStock.Value = 0;
+
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace LaboratorioProgramacion
             Agregar_producto frm = new Agregar_producto();
             //Muestra el formulario Agregar_producto como un cuadro de diálogo modal.
             //Esto significa que el usuario debe interactuar con este formulario antes de volver a la interfaz anterior.
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
@@ -107,7 +107,7 @@ namespace LaboratorioProgramacion
             //Crea una nueva instancia del formulario Eliminar_Producto, que permite al usuario eliminar un producto existente
             Eliminar_Producto frm = new Eliminar_Producto();
             //Muestra el formulario Eliminar_Producto como un cuadro de diálogo modal
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
@@ -116,8 +116,18 @@ namespace LaboratorioProgramacion
             //Crea una nueva instancia del formulario Reporte, que permite al usuario ver o generar reportes de productos
             Reporte frm = new Reporte();
             //Muestra el formulario Reporte como un cuadro de diálogo modal
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
+        }
+
+        
+            
     }
 }

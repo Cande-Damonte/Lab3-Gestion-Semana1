@@ -29,6 +29,7 @@ namespace LaboratorioProgramacion
             ConexionBD BD = new ConexionBD();
             //Llama al método listarProductos, llena dgvProductos con los productos de la base de datos
             BD.listarProductos(dgvProductos);
+
             //Llama al método LlenarcmbCategorias, carga el control cmbCategorias con las categorías de productos desde la base de datos
             BD.LlenarcmbCategorias(cmbCategorias);
         }
@@ -73,6 +74,8 @@ namespace LaboratorioProgramacion
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             txtPrecio.Text = "";
+            cmbCategorias.SelectedIndex = -1;
+            nupStock.Value = 0;
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +97,13 @@ namespace LaboratorioProgramacion
         {
             Reporte frmReportar = new Reporte();
             frmReportar.Show();
+            this.Hide();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
             this.Hide();
         }
     }

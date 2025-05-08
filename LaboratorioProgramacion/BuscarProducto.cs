@@ -21,28 +21,28 @@ namespace LaboratorioProgramacion
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Agregar_producto frm = new Agregar_producto();
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Modifica_Producto frm = new Modifica_Producto();
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Eliminar_Producto frm = new Eliminar_Producto();
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reporte frm = new Reporte();
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
@@ -72,7 +72,7 @@ namespace LaboratorioProgramacion
                 //Llama al  listarProductosPorCodigo, filtra los productos en la base de datos con el código ingresado
                 //y los muestra en el dgvProductos 
                 conexion.listarProductosPorCodigo(dgvProductos, productos);
-
+                Limpiar();
 
                 // Mostrar mensaje si no se encuentra el producto
                 if (dgvProductos.Rows.Count == 0)
@@ -86,6 +86,18 @@ namespace LaboratorioProgramacion
             {
                 MessageBox.Show("Error buscando producto: " + ex.Message);
             }
+        }
+        public void Limpiar()
+        {
+            //Establece el texto del TextBox txtCodigo a una cadena vacía, eliminando cualquier texto que contenga
+            txtCodigo.Text = "";
+
+        }
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
         }
     }
 }

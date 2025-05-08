@@ -32,7 +32,7 @@ namespace LaboratorioProgramacion
             Agregar_producto frm = new Agregar_producto();
             //Muestra el formulario de manera modal,
             //lo que significa que el usuario debe cerrar este formulario antes de regresar a la ventana principal
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
@@ -41,7 +41,7 @@ namespace LaboratorioProgramacion
             //Crea una nueva instancia del formulario Modifica_producto
             Modifica_Producto frm = new Modifica_Producto();
             //Muestra el formulario de manera modal, permitiendo al usuario modificar un producto existente
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
         }
 
@@ -83,6 +83,13 @@ namespace LaboratorioProgramacion
         {
             Reporte frmReportar = new Reporte();
             frmReportar.Show();
+            this.Hide();
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
             this.Hide();
         }
     }

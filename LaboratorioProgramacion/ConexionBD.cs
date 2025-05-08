@@ -57,8 +57,32 @@ namespace LaboratorioProgramacion
                     MessageBox.Show(ex.Message);
                 }
             }
+        public void listarProductos1(DataGridView dgvProductos1)
+        {
+            try
+            {
+                // Intenta conectar y traer los productos
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
 
-            public void listarProductosPorCodigo(DataGridView dgvProductos, Productos idProducto)
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "SELECT * FROM Productos";// Selecciona todos los productos.  
+
+                DataTable tablaProductos1 = new DataTable(); // Crea un DataTable para almacenar los datos.
+
+                adaptador = new OleDbDataAdapter(comando);// Adaptador para llenar el DataTable
+                adaptador.Fill(tablaProductos1); // Llenar el DataTable con datos de la base de datos
+
+                dgvProductos1.DataSource = tablaProductos1; // Asignar el DataTable al DataGridView para mostrar los productos.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void listarProductosPorCodigo(DataGridView dgvProductos, Productos idProducto)
             {
                 //Usa la instrucción using para inicializar un objeto OleDbConnection llamado conexion,
                 //que se conecta a la base de datos usando la cadena de conexión cadena.
@@ -177,15 +201,15 @@ namespace LaboratorioProgramacion
                 }
             }
 
-            public void llenarListbox(ListBox listBox, string nombre, string descripcion, double precio, int stock)
+            public void llenarListbox(ListBox lstDescripcion, string nombre, string descripcion, double precio, int stock)
             {
                 try
                 {
                     // Limpiar los elementos actuales del ListBox.
-                    listBox.Items.Clear();
+                    lstDescripcion.Items.Clear();
 
                     // Añadir el nuevo producto al ListBox.
-                    listBox.Items.Add($"{nombre} - {descripcion} - {precio:C} - Stock: {stock}");
+                    lstDescripcion.Items.Add($"{nombre} - {descripcion} - {precio:C} - Stock: {stock}");
                 }
                 catch (Exception ex)
                 {
@@ -194,7 +218,7 @@ namespace LaboratorioProgramacion
                 }
             }
 
-            public void LlenarcmbCategorias(ComboBox cmbCategorias)
+        public void LlenarcmbCategorias(ComboBox cmbCategorias)
             {
                 //Se utiliza un bloque try-catch para manejar posibles excepciones
                 //Se crea una nueva conexión conexion usando la cadena de conexión cadena, que contiene la ruta a la base de datos

@@ -55,5 +55,12 @@ namespace LaboratorioProgramacion
             ConexionBD BD = new ConexionBD();
             BD.CargarProductosBajoStock(lstControl);
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
+        }
     }
 }
